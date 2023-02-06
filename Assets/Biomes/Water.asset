@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6901df3950aac1a4090fb30c6eb970ab, type: 3}
   m_Name: Water
   m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 11400000, guid: b54b706c52bd4af4e9b677d2d92a3d67, type: 2}
-  - {fileID: 11400000, guid: 8cdd07cd20759c043a2e6d5fe28d7b0c, type: 2}
-  - {fileID: 11400000, guid: 82c22690115719c49a32bdb1b8db4c21, type: 2}
+  tiles: {fileID: 11400000, guid: b54b706c52bd4af4e9b677d2d92a3d67, type: 2}
   minHeight: 0.1
-  minMoisture: 0.2
-  minHeat: 0.5
-  globalBiomIDData: 0.25
+  minMoisture: 0.32
+  minHeat: 0.39
+  globalBiomIDData: 1
   objectsToSpawn: []

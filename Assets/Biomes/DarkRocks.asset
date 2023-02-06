@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6901df3950aac1a4090fb30c6eb970ab, type: 3}
   m_Name: DarkRocks
   m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 11400000, guid: fb5939ff8dc14a2479cf3031b9c92fd9, type: 2}
+  tiles: {fileID: 11400000, guid: fb5939ff8dc14a2479cf3031b9c92fd9, type: 2}
   minHeight: 0
   minMoisture: 1
   minHeat: 1
-  globalBiomIDData: 0.5
+  globalBiomIDData: 0.25
   objectsToSpawn: []

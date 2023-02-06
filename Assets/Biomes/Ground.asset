@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6901df3950aac1a4090fb30c6eb970ab, type: 3}
   m_Name: Ground
   m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 11400000, guid: cbd8e27cb5db7cb4a8213c9728d100d2, type: 2}
-  minHeight: 1
-  minMoisture: 0.5
-  minHeat: 0.45
-  globalBiomIDData: 0.75
+  tiles: {fileID: 11400000, guid: 202ae443a6354b240bd937d6c950614d, type: 2}
+  minHeight: 0.22
+  minMoisture: 0.35
+  minHeat: 0.26
+  globalBiomIDData: 0.5
   objectsToSpawn:
   - Name: Trees
     subSpawnTiles:

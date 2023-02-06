@@ -40,8 +40,8 @@ public class LevelGenerator2D : MonoBehaviour
     private float[,] tileMap;
     private float[,] varietyMap;
     private float[] biomValues;
-  
-   
+
+    public bool isUpdate;
 
     public void Generate()
     {
@@ -58,7 +58,7 @@ public class LevelGenerator2D : MonoBehaviour
         //new tile map
         tileMap = new float[width, height];
 
-        //adding global id to bioms based on their array
+        //adding global id to bioms based on their array, for calculations
         float biomIDValue = (1f / biomes.Length);
         biomValues = new float[biomes.Length];
         for (int i = 0; i < biomes.Length; i++)
@@ -67,6 +67,7 @@ public class LevelGenerator2D : MonoBehaviour
             biomValues[i] = biomes[i].globalBiomIDData;
         }
 
+        //drawing base map
         for (int x = 0; x < width; ++x)
         {
             for (int y = 0; y < height; ++y)
@@ -75,14 +76,15 @@ public class LevelGenerator2D : MonoBehaviour
             }
         }
 
-        interpolatedTileMap = tileMap; //for interpolation
+        interpolatedTileMap = tileMap;
     }
 
-    public void additionalInterpolation()
+    private void Update()
     {
-        interpolatedTileMap = NoiseGenerator.noiseSmoother(width, height, interpolatedTileMap, biomValues, interpolationDetail);
-
-        
+        if (isUpdate)
+        {
+            Generate();
+        }
     }
 
     public void addBorderVarietyBiomes()
@@ -94,7 +96,7 @@ public class LevelGenerator2D : MonoBehaviour
 
         for (int biome = 0; biome < biomes.Length; biome++)
         {
-            mapTiles[biome] = biomes[biome].tiles[0];
+            mapTiles[biome] = biomes[biome].tiles;
         }
 
         for (int x = 0; x < width; ++x)

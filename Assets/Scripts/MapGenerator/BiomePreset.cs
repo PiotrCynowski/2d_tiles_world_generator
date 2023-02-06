@@ -5,7 +5,7 @@ using System;
 [CreateAssetMenu(fileName = "Biome Preset", menuName = "New Biome Preset")]
 public class BiomePreset : ScriptableObject
 {
-    public Tile[] tiles;
+    public Tile tiles;
     public float minHeight;
     public float minMoisture;
     public float minHeat;
@@ -15,7 +15,7 @@ public class BiomePreset : ScriptableObject
 
     public Tile GetTleSprite()
     {
-        return tiles[UnityEngine.Random.Range(0, tiles.Length)];
+        return tiles;
     }
 
     public (Tile, bool) GetSubTile()
@@ -73,6 +73,6 @@ public class BiomePreset : ScriptableObject
         public Tile[] subSpawnTiles;
         [Range(0,1)]
         public float chanceToSpawn;
-        public bool isFlatLand;
+        public bool isFlatLand; //additional feature
     }
 }
