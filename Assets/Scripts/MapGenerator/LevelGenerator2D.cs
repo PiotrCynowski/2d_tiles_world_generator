@@ -87,9 +87,9 @@ public class LevelGenerator2D : MonoBehaviour
         }
     }
 
-    public void addBorderVarietyBiomes()
+    public void AddBorderVarietyBiomes()
     {
-        varietyMap = NoiseGenerator.borderVariety(width, height, tileMap);
+        varietyMap = NoiseGenerator.BorderVariety(width, height, tileMap);
 
       
         Tile[] mapTiles = new Tile[biomes.Length];

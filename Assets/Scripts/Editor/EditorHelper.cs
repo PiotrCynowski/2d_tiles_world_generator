@@ -18,7 +18,7 @@ public class LevelGenerator2DEditor : Editor
 
         if (GUILayout.Button("add border variety"))
         {
-            LG.addBorderVarietyBiomes();
+            LG.AddBorderVarietyBiomes();
         }
 
         if (GUILayout.Button("spawn TREES"))

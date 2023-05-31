@@ -11,7 +11,7 @@ public class BiomePreset : ScriptableObject
     public float minHeat;
     public float globalBiomIDData;
     [Header("Sub Spawn")]
-    public possibleSubSpawn[] objectsToSpawn;
+    public PossibleSubSpawn[] objectsToSpawn;
 
     public Tile GetTleSprite()
     {
@@ -67,7 +67,7 @@ public class BiomePreset : ScriptableObject
     }
 
     [Serializable]
-    public class possibleSubSpawn
+    public class PossibleSubSpawn
     {
         public string Name;
         public Tile[] subSpawnTiles;

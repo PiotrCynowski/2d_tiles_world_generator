@@ -36,7 +36,7 @@ namespace noiseGenerator
             return noiseMap;
         }
 
-        public static float[,] borderVariety(int width, int height, float[,] previousNoise)
+        public static float[,] BorderVariety(int width, int height, float[,] previousNoise)
         {
             float checkBorderValues(float[,] tilesToCheck)
             {
